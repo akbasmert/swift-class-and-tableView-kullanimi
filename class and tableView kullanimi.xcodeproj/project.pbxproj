@@ -14,6 +14,7 @@
 		4157086728B68D67003EFEB2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4157086628B68D67003EFEB2 /* Assets.xcassets */; };
 		4157086A28B68D67003EFEB2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4157086828B68D67003EFEB2 /* LaunchScreen.storyboard */; };
 		4157087228B68FEA003EFEB2 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4157087128B68FE9003EFEB2 /* DetailsViewController.swift */; };
+		4157087428B695BF003EFEB2 /* sehir.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4157087328B695BF003EFEB2 /* sehir.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		4157086928B68D67003EFEB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4157086B28B68D67003EFEB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4157087128B68FE9003EFEB2 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		4157087328B695BF003EFEB2 /* sehir.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sehir.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				4157085F28B68D67003EFEB2 /* SceneDelegate.swift */,
 				4157086128B68D67003EFEB2 /* ViewController.swift */,
 				4157087128B68FE9003EFEB2 /* DetailsViewController.swift */,
+				4157087328B695BF003EFEB2 /* sehir.swift */,
 				4157086328B68D67003EFEB2 /* Main.storyboard */,
 				4157086628B68D67003EFEB2 /* Assets.xcassets */,
 				4157086828B68D67003EFEB2 /* LaunchScreen.storyboard */,
@@ -144,6 +147,7 @@
 				4157086228B68D67003EFEB2 /* ViewController.swift in Sources */,
 				4157085E28B68D67003EFEB2 /* AppDelegate.swift in Sources */,
 				4157086028B68D67003EFEB2 /* SceneDelegate.swift in Sources */,
+				4157087428B695BF003EFEB2 /* sehir.swift in Sources */,
 				4157087228B68FEA003EFEB2 /* DetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
