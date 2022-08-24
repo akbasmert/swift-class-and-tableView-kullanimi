@@ -12,6 +12,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var tableView: UITableView!
     
     var sehirDizisi = [Sehir]() //SEHİR DİZİSİNE ERİŞEBİLMEK İÇİN BURADA TANIMLADIK
+    var kullaniciSecimi : Sehir?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,14 +23,17 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tableView.dataSource = self
         
         // ŞEHİRLER
-        let istanbul = Sehir(isim: "İstanbul", bolge: "Marmara", gorsel: UIImage(named: "isatanbul")!)
-        let ankara = Sehir(isim: "ankara", bolge: "içanadolu", gorsel: UIImage(named: "ankara")!)
+        
         let izmir = Sehir(isim: "izmir", bolge: "ege", gorsel: UIImage(named: "izmir")!)
         let ordu = Sehir(isim: "ordu", bolge: "karadeniz", gorsel: UIImage(named: "ordu")!)
         let adana = Sehir(isim: "adana", bolge: "içanadolu", gorsel: UIImage(named: "adana")!)
         let yalova = Sehir(isim: "yalova", bolge: "Marmara", gorsel: UIImage(named: "yalova")!)
+        let istanbul = Sehir(isim: "istanbul", bolge: "marmara", gorsel: UIImage(named: "izmir")!)
+        let ankara = Sehir(isim: "ankara", bolge: "içanadolu", gorsel: UIImage(named: "ankara")!)
+        let corum = Sehir(isim:"çorum", bolge: "içanadolu", gorsel: UIImage(named: "ankara")!)
+        let manisa = Sehir(isim: "manisa", bolge: "ege", gorsel: UIImage(named: "izmir")!)
         
-         sehirDizisi = [istanbul, ankara, izmir, ordu, adana, yalova] // SEHİR DİZİSİNE EKLEDİK APPEND İLE DE YAPABİLİRDİK
+         sehirDizisi = [ izmir, ordu, adana, yalova, istanbul, ankara,corum, manisa] // SEHİR DİZİSİNE EKLEDİK APPEND İLE DE YAPABİLİRDİK
         
     }
     
@@ -46,6 +50,22 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         cell.textLabel?.text = sehirDizisi[indexPath.row].isim // SEHİR OBJESİ VERİYOR STRİNG VERMEDİĞİ İÇİN .İSİM YAPTIK
         return cell
         
+    }
+    
+    // SEÇİLİNCE NE OLACAĞINI BELİRLEMEK İÇİN DİDSELECTROWAT KULLANDİK
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+         kullaniciSecimi = sehirDizisi[indexPath.row] // Kullanıcının hangi secimi yaptığını segue ye aktarmak için
+        performSegue(withIdentifier: "toDetailsVC", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toDetailsVC" {
+            
+            let destinationVc = segue.destination as! DetailsViewController
+            destinationVc.secilenSehir =  kullaniciSecimi
+            
+        }
     }
     
     

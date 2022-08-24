@@ -82,7 +82,7 @@
                     <connections>
                         <outlet property="imageView" destination="5zt-ro-6im" id="07D-dz-PZV"/>
                         <outlet property="sehirBolge" destination="ldk-b5-BwD" id="0wg-JG-ZRb"/>
-                        <outlet property="sehirIsmi" destination="9WC-z6-3Mt" id="x4p-kC-AeD"/>
+                        <outlet property="sehirismi" destination="9WC-z6-3Mt" id="SHC-r0-H5b"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yuc-MO-hzz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
